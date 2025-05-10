@@ -267,6 +267,12 @@ footer {
     margin: 10px 0;
   }
 
+  .expectationsandsponsors {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+  }
+
   table {
     width: 100%;
     font-size: 0.9rem;
@@ -284,6 +290,7 @@ footer {
     flex-direction: column;
     gap: 20px;
     text-align: left;
+    font-size: 5px;
   }
 
   .contacts,
