@@ -183,7 +183,7 @@ footer {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     section {
     padding: 40px 10%;
     }
@@ -202,7 +202,7 @@ footer {
     .homeh1 {
     font-size: 1.8em;
     }
-}
+}*/
 
 #backtotopbtn {
     display: none; 
@@ -225,4 +225,79 @@ footer {
 #backtotopbtn:hover {
     background-color: #009a9f;
 }
+/* ===== Responsive Styles for Phones/Tablets (<= 768px) ===== */
+@media screen and (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+    padding: 0;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 40px 8%;
+  }
+
+  .homeh1 {
+    font-size: 1.6rem;
+  }
+
+  .homelinks {
+    text-align: center;
+  }
+
+  .homelinks p button {
+    width: 100%;
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.9rem;
+    overflow-x: auto;
+  }
+
+  .RSVPform input,
+  .RSVPform select,
+  .RSVPform button {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .contacts,
+  .ending {
+    width: 100%;
+  }
+
+  #backToTopBtn {
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+
+}
+
 
