@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Performer Registration - JKUAT Got Talent</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('IMAGES/background-stage.webp') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    .container {
+      max-width: 700px;
+      background-color: rgba(0, 0, 0, 0.75);
+      margin: 50px auto;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    .returnhome a{
+      text-decoration: none;
+      color: #00c2cb;
+    }
+
+    .returnhome a:hover{
+        text-decoration:none;
+        color: pink;
+        font-size: small;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .returnhome a:active{
+        color:rgba(255, 255, 255, 0.815);
+    }
+
+    .instructions{
+      margin-top: 30px;
+    }
+
+    #instructionsBox{
+        display: none; 
+        margin-top: 15px;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #ffcc00;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffcc00;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: #1a73e8;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #155ab6;
+    }
+
+    .consent {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .note {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 30px;
+      color: #cccccc;
+    }
+  </style>
+
+  <script>
+    function toggleInstructions() {
+      const box = document.getElementById("instructionsBox");
+      box.style.display = box.style.display === "none" ? "block" : "none";
+    }
+  </script> 
+   
+</head>
+<body>
+  <div class="container">
+    <div class="returnhome"><p>🔙<a href="index.html">Back to Home page</a></p></div>
+    <h1>🎤 Register to Perform</h1>
+    <p>Fill out the form below to reserve your performance slot at JKUAT'S Got Talent 2025.</p>
+    
+    <div class="instructions">
+        <button type="button" class="instrusctionsbtn" onclick="toggleInstructions()" style="background-color: #ffcc00; color: black;">
+        📋 View Performer Instructions
+        </button>
+    
+        <div id="instructionsBox">
+        <ul>
+            <li>Arrive at least 30 minutes before the event begins for check-in and setup.</li>
+            <li>Performance slots are 3-5 minutes long. Keep your act within this time.</li>
+            <li>All content must be appropriate for a university audience.</li>
+            <li>Bring any special equipment you may need (we'll provide sound and mics).</li>
+            <li>You must attend the rehearsal session on May 23rd (evening).</li>
+            <li>Group acts must ensure all members are registered under one name or indicate group details in "Act Title".</li>
+        </ul>
+        </div>
+    </div>
+    <form action="" class="registrationform">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+
+      <label for="regno">Student ID:</label>
+      <input type="text" id="regno" name="regno" placeholder="Enter your ID number">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Name@gmail.com">
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your Phone number">
+
+      <label for="category">Talent Category:</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select a Category --</option>
+        <option value="singing">Singing</option>
+        <option value="dance">Dance</option>
+        <option value="poetry">Poetry</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="instrumental">Instrumental</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="acttitle">Title of Your Act:</label>
+      <input type="text" id="acttitle" name="acttitle" placeholder="Give the title of your Act">
+
+      <label>Performance Type:</label>
+      <input type="radio" id="solo" name="type" value="solo" checked>
+      <label for="solo" style="display:inline;">Solo</label>
+      <input type="radio" id="group" name="type" value="group">
+      <label for="group" style="display:inline;">Group</label>
+
+      <label for="equipment">Equipment Needed (optional):</label>
+      <input type="text" id="equipment" name="equipment" placeholder="e.g., Microphone, Speakers">
+
+      <label for="demo">Upload Demo (optional):</label>
+      <input type="file" id="demo" name="demo">
+
+      <label class="consent">
+        <input type="checkbox" required>
+        I agree to follow all event rules and guidelines.
+      </label>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+
+    <div class="note">
+      You will receive a confirmation email once your registration is approved.
+    </div>
+  </div>
+</body>
+</html>
