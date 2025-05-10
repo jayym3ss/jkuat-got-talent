@@ -271,7 +271,7 @@ footer {
     flex-direction: column;
     gap: 20px;
     text-align: left;
-    font-size: 3px;
+    font-size: 10px;
   }
 
   .contacts,
